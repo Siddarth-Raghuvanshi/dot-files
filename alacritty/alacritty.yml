@@ -9,58 +9,37 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: .90
+background_opacity: 1.0 
 dynamic_title: true
 
-# Font Customization
-font:
-  normal:
-    family: Fira Code
-    style: Regular
-  bold:
-    family: Fira Code
-    style: Bold
-  italic:
-    family: Fira Code
-    style: Italic
-  size: 13.25
-  offset:
-    x: 0
-    y: 0
-
-# Colors (Tomorrow Night)
+# Colors (Material Theme)
 colors:
   # Default colors
   primary:
-    background: '#1d1f21'
-    foreground: '#c5c8c6'
-
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: '#1d1f21'
-    cursor: '#ffffff'
+    background: '0x1e282d'
+    foreground: '0xc4c7d1'
 
   # Normal colors
   normal:
-    black:   '#1d1f21'
-    red:     '#cc6666'
-    green:   '#b5bd68'
-    yellow:  '#e6c547'
-    blue:    '#81a2be'
-    magenta: '#b294bb'
-    cyan:    '#70c0ba'
-    white:   '#373b41'
+    black:   '0x666666'
+    red:     '0xeb606b'
+    green:   '0xc3e88d'
+    yellow:  '0xf7eb95'
+    blue:    '0x80cbc4'
+    magenta: '0xff2f90'
+    cyan:    '0xaeddff'
+    white:   '0xffffff'
 
   # Bright colors
   bright:
-    black:   '#666666'
-    red:     '#ff3334'
-    green:   '#9ec400'
-    yellow:  '#f0c674'
-    blue:    '#81a2be'
-    magenta: '#b77ee0'
-    cyan:    '#54ced6'
-    white:   '#282a2e'
-
+    black:   '0xa1a1a1'
+    red:     '0xeb606b'
+    green:   '0xc3e88d'
+    yellow:  '0xf7eb95'
+    blue:    '0x7dc6bf'
+    magenta: '0x6c71c4'
+    cyan:    '0x35434d'
+    white:   '0xffffff'
+   
 key_bindings:
   - { key: N, mods: Control, action: SpawnNewInstance }
