@@ -70,7 +70,6 @@ let g:jedi#show_call_signatures = "2"
 "Slimux Settings
 nnoremap R<CR> :SlimuxREPLSendLine<CR>
 vnoremap R<CR> :SlimuxREPLSendLine<CR>
-nnoremap <C-c><C-v> :SlimuxREPLConfigure<CR>
 
 "Installing Vimplug
 call plug#begin('~/.config/nvim/plugged')
