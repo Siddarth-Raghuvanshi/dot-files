@@ -1,7 +1,24 @@
+
+"Installing Vimplug
+call plug#begin('~/.config/nvim/plugged')
+
+"Plugins I like
+Plug 'https://github.com/Siddarth-Raghuvanshi/SimpylFold.git'
+Plug 'https://github.com/plasticboy/vim-markdown.git'
+Plug 'https://github.com/jpalardy/vim-slime'
+Plug 'https://github.com/ervandew/supertab.git'
+Plug 'https://github.com/davidhalter/jedi-vim.git'
+Plug 'https://github.com/airblade/vim-gitgutter.git'
+Plug 'https://github.com/godlygeek/tabular'
+Plug 'https://github.com/plasticboy/vim-markdown'
+Plug 'https://github.com/esamattis/slimux.git'
+Plug 'https://github.com/lunacookies/vim-colors-xcode.git'
+
+call plug#end()
+
 " Color and Theme Settings
-set termguicolors
-syntax on
-colorscheme xcodedark
+colorscheme xcodewwdc
+let g:xocode_green_comments=1
 
 " Get out of insert mode without killing myself
 inoremap jj <Esc>
@@ -19,9 +36,9 @@ set smarttab
 "Allowing Neovim to work with Python
 let g:python3_host_prog = '/Users/Siddarth/opt/anaconda3/envs/neovim/bin/python' 
 
-"Copy and Paste in Vim using the System Register 
+"Copy and Paste in Vim using the System Register
 vnoremap <C-c> "+y
-noremap <C-p> "+P
+noremap <C-v> "+P
 
 "Visual Mode Config
 vnoremap <tab> >gv
@@ -45,6 +62,7 @@ set cursorline
 set showmatch
 set relativenumber
 set colorcolumn=79
+highlight ColorColumn ctermbg=168 
 
 "Searching
 set incsearch
@@ -71,18 +89,13 @@ let g:jedi#show_call_signatures = "2"
 nnoremap R<CR> :SlimuxREPLSendLine<CR>
 vnoremap R<CR> :SlimuxREPLSendLine<CR>
 
-"Installing Vimplug
-call plug#begin('~/.config/nvim/plugged')
+"Spellcheck for Markdown files and Git Commit Messages
+autocmd Filetype markdown setlocal spell
+autocmd Filetype markdown setlocal complete+=kspell
+autocmd Filetype markdown setlocal spellsuggest+=10
+autocmd Filetype gitcommit setlocal spell
+autocmd Filetype gitcommit setlocal complete+=kspell
+autocmd Filetype gitcommit setlocal spellsuggest+=10
 
-"Plugins I like
-Plug 'https://github.com/Siddarth-Raghuvanshi/SimpylFold.git'
-Plug 'https://github.com/plasticboy/vim-markdown.git'
-Plug 'https://github.com/jpalardy/vim-slime'
-Plug 'https://github.com/ervandew/supertab.git'
-Plug 'https://github.com/davidhalter/jedi-vim.git'
-Plug 'https://github.com/airblade/vim-gitgutter.git'
-Plug 'https://github.com/godlygeek/tabular'
-Plug 'https://github.com/plasticboy/vim-markdown'
-Plug 'https://github.com/esamattis/slimux.git'
-
-call plug#end()
+"Auto wrap around for Markdown files
+au BufRead,BufNewFile *.md setlocal textwidth=79
